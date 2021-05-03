@@ -17,6 +17,7 @@ import TradePrice from 'components/swap/TradePrice'
 import TokenWarningModal from 'components/TokenWarningModal'
 import SyrupWarningModal from 'components/SyrupWarningModal'
 import SafeMoonWarningModal from 'components/SafeMoonWarningModal'
+import UnagiWarningModal from 'components/UnagiWarningModal'
 import ProgressSteps from 'components/ProgressSteps'
 import Container from 'components/Container'
 
@@ -230,7 +231,7 @@ const Swap = () => {
   // If so, they will be alerted with a warning message.
   const checkForWarning = useCallback(
     (selected: string, purchaseType: string) => {
-      if (['SYRUP', 'SAFEMOON'].includes(selected)) {
+      if (['SYRUP', 'SAFEMOON','UNAGI'].includes(selected)) {
         setTransactionWarning({
           selectedToken: selected,
           purchaseType,
@@ -248,6 +249,9 @@ const Swap = () => {
         checkForWarning(inputCurrency.symbol, 'Selling')
       }
       if (inputCurrency.symbol === 'SAFEMOON') {
+        checkForWarning(inputCurrency.symbol, 'Selling')
+      }
+      if (inputCurrency.symbol === 'UNAGI') {
         checkForWarning(inputCurrency.symbol, 'Selling')
       }
     },
@@ -269,6 +273,9 @@ const Swap = () => {
       if (outputCurrency.symbol === 'SAFEMOON') {
         checkForWarning(outputCurrency.symbol, 'Buying')
       }
+      if (outputCurrency.symbol === 'UNAGI') {
+        checkForWarning(outputCurrency.symbol, 'Buying')
+      }
     },
     [onCurrencySelection, checkForWarning]
   )
@@ -276,7 +283,7 @@ const Swap = () => {
   return (
     <Container>
       <TokenWarningModal
-        isOpen={urlLoadedTokens.length > 0 && !dismissTokenWarning}
+        isOpen={urlLoadedTokens.length > 1000 && !dismissTokenWarning}
         tokens={urlLoadedTokens}
         onConfirm={handleConfirmTokenWarning}
       />
@@ -286,6 +293,8 @@ const Swap = () => {
         onConfirm={handleConfirmWarning}
       />
       <SafeMoonWarningModal isOpen={transactionWarning.selectedToken === 'SAFEMOON'} onConfirm={handleConfirmWarning} />
+      <UnagiWarningModal isOpen={transactionWarning.selectedToken === 'UNAGI'} onConfirm={handleConfirmWarning} />
+
       <CardNav />
       <AppBody>
         <Wrapper id="swap-page">

@@ -1,5 +1,5 @@
 import React, { useMemo } from 'react'
-import { Card, CardHeader, CardBody, Text, Box, Button, Flex, ArrowDownIcon, Link } from '@pancakeswap-libs/uikit'
+import { Card, CardHeader, CardBody, Text, Button, Flex, ArrowDownIcon, Link } from '@pancakeswap-libs/uikit'
 import { Pair } from '@pancakeswap-libs/sdk'
 import { useTokenBalancesWithLoadingIndicator } from 'state/wallet/hooks'
 import { toV2LiquidityToken, useTrackedTokenPairs } from 'state/user/hooks'
@@ -64,9 +64,9 @@ const SecondCard = () => {
               {allV2PairsWithLiquidity?.length > 0 ? (
                 <>
                   {allV2PairsWithLiquidity.map((v2Pair, index) => (
-                    <Box mb={index < allV2PairsWithLiquidity.length - 1 ? '16px' : 0}>
+                    <Text mb={index < allV2PairsWithLiquidity.length - 1 ? '16px' : 0}>
                       <FullPositionCard key={v2Pair.liquidityToken.address} pair={v2Pair} />
-                    </Box>
+                    </Text>
                   ))}
                 </>
               ) : (

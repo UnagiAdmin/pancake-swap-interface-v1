@@ -14,20 +14,12 @@ function Nav({ activeIndex = 0 }: { activeIndex?: number }) {
     <StyledNav>
       <ButtonMenu activeIndex={activeIndex} scale="sm" variant="subtle">
         <ButtonMenuItem id="swap-nav-link" to="/swap" as={Link}>
-          {TranslateString(1142, 'Swap')}
+          {TranslateString(1142, 'SWAP')}
         </ButtonMenuItem>
         <ButtonMenuItem id="pool-nav-link" to="/pool" as={Link}>
           {TranslateString(262, 'Liquidity')}
         </ButtonMenuItem>
-        <ButtonMenuItem
-          id="pool-nav-link"
-          as="a"
-          href="https://www.binance.org/en/bridge?utm_source=PancakeSwap"
-          target="_blank"
-          rel="noreferrer noopener"
-        >
-          Bridge
-        </ButtonMenuItem>
+       
       </ButtonMenu>
     </StyledNav>
   )

@@ -29,7 +29,7 @@ const VersionBar = () => {
           V2
         </ButtonMenuItem>
         <ButtonMenuItem as="a" href="https://v1exchange.pancakeswap.finance/#/">
-          V1 (old)
+          V2 (old)
         </ButtonMenuItem>
       </ButtonMenu>
       <Button

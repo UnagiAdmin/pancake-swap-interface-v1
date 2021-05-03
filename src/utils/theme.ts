@@ -1,7 +1,7 @@
 const CACHE_KEY = 'IS_DARK'
 
 export function getThemeCache(): boolean | null {
-  let cache = null
+  let cache = true
   try {
     const rawCache = localStorage.getItem(CACHE_KEY)
     if (rawCache) {

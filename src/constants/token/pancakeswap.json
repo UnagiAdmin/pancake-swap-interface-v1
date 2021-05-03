@@ -8,7 +8,7 @@
   },
   "tags": {},
   "logoURI": "https://exchange.pancakeswap.finance/images/pancakeswap.png",
-  "keywords": ["pancake", "default"],
+  "keywords": ["UNAGI", "default"],
   "tokens": [
     {
       "name": "WBNB Token",
@@ -193,6 +193,14 @@
       "chainId": 56,
       "decimals": 18,
       "logoURI": "https://exchange.pancakeswap.finance/images/coins/0x0e09fabb73bd3ade0a17ecc321fd13a19e81ce82.png"
+    },
+    {
+      "name": "unagiswap.finance",
+      "symbol": "UNAGI",
+      "address": "0x8f20eBD7Cdb3eFdb51D58D582a21e1A0b41F4436",
+      "chainId": 56,
+      "decimals": 9,
+      "logoURI": "https://www.unagiswap.finance/images/favicon.png"
     },
     {
       "name": "Ankr",
