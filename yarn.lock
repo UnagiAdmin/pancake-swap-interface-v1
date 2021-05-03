@@ -2111,7 +2111,7 @@
 
 "@pancakeswap-libs@UnagiSwap/unagiSwap-sdk-v2":
   version "1.0.1"
-  resolved "https://github.com/UnagiSwap/unagiSwap-sdk-v2/archive/refs/tags/2.0.tar.gz"
+  resolved "https://github.com/UnagiSwap/unagiSwap-sdk-v2/archive/refs/tags/2.1.tar.gz"
   dependencies:
     "@uniswap/v2-core" "^1.0.0"
     big.js "^5.2.2"
