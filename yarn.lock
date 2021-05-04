@@ -2122,8 +2122,8 @@
     toformat "^2.0.0"
 
 "@pancakeswap-libs@UnagiSwap/unagiswap-financeuikit":
-  version "0.27.1"
-  resolved "https://github.com/UnagiSwap/unagiswap-financeuikit/archive/refs/tags/1.0.tar.gz"
+  version "0.1.1"
+  resolved "https://github.com/UnagiSwap/unagiswap-financeuikit/archive/refs/tags/1.1.tar.gz"
   dependencies:
     "@popperjs/core" "^2.9.2"
     "@types/lodash" "^4.14.168"
